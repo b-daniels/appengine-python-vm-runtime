@@ -63,9 +63,9 @@ try:
   googleclouddebugger.AttachDebugger()
 except ImportError:
   pass
-except Exception as e:
-  logging.warn('Exception while initializing Cloud Debugger: %s',
-               traceback.format_exc(e))
+except Exception:
+  logging.warn('Exception while initializing the Cloud Debugger. Debugging '
+               'will not be available.', exc_info=True)
 
 # Take an immutable snapshot of env data from env_config. This is added to the
 # environment in `reset_environment_middleware` in a particular order to ensure
