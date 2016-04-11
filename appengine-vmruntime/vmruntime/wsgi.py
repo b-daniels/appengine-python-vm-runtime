@@ -22,7 +22,6 @@ WSGI app.
 
 import logging
 import os
-import traceback
 
 from google.appengine.ext.vmruntime import vmconfig
 from google.appengine.ext.vmruntime import vmstub
